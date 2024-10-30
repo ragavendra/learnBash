@@ -1,0 +1,174 @@
+#!/bin/sh
+#. ./common.lib
+
+someFunc() {
+
+	echo "someFunc is called with $@"
+	x=2
+}
+
+echo "Script is called with $@"
+x=1
+
+echo "x is now $x"
+
+#someFunc 1 2 3
+
+# using pipe will start tee before someFunc, so x will be 1 itself
+someFunc 1 2 3 | tee out.log
+
+echo "x is now $x"
+addUser() {
+	user=$1
+	passwd=$2
+	comments=$@
+	shift 2
+	echo "Adding user $user with passwd $passwd"
+	#echo useradd -c "$comments" $user
+	echo "Added user $user with $comments"
+
+	# assuming all went well, else non zero
+	return 0;
+}
+
+addUser one passOne this is comments
+addUser two passTwo this2 is comments
+addUser three passThree this3 is comments
+
+op=$(find / -name "*.html" -print 2> err)
+echo "$op" | grep "/index.html$"
+#> /dev/null 1>&1
+echo "$op" | grep "/contents.html$"
+#> /dev/null 2>&1
+
+echo -en "Enter your name [ `whoami` ] :"
+read Name
+echo "Your name is ${Name:-`whoami`}"
+echo "Your name is ${Name:=`whoami`}"
+
+if [ -z "$Name" ]; then
+	Name=`whoami`
+fi
+
+echo "Your name is ${Name}"
+
+_IFS="$IFS"
+IFS=:
+echo "Please enter some text separated by :"
+read x y z
+echo "You entered $x $y and $z"
+IFS=$_IFS
+
+# 0 for no issues. Non zero on failure
+echo "Process status of last run command $?"
+echo "Process id of curr shell $$"
+echo "Process id of last bg process $!"
+
+ls "$1"
+if [ $? -ne "0" ]; then
+	echo "Issue running $?"
+	exit
+fi
+
+# while [ $i -ne "" ]
+while [ "$#" -gt "0" ]
+do
+	echo "You entered $1"
+	shift
+done
+
+echo "You passed $# params"
+echo "All params $@"
+echo "All params without spaces $*"
+echo "Param 1 is $1"
+echo "Param 2 is $1"
+echo "Param 3 is $1"
+echo "Program exited with $?"
+
+
+# this is comment
+echo say some
+echo "Hello      World"       # This is a comment, too!
+echo "Hello World"
+echo "Hello * World"
+echo Hello * World
+echo Hello      World
+echo "Hello" World
+echo Hello "     " World
+echo "Hello "*" World"
+echo `hello` world
+echo 'hello' world
+
+echo "What is your name?"
+read NAME
+echo "Your name is $NAME"
+echo "Your name is $NAMEis"
+echo "Your name is ${NAME}is"
+echo "Your name is $(NAME)is"
+
+echo "This is for"
+
+if [ i -lt 0 ]
+then
+	echo "i is less than 0"
+elif [ i -ge 0 ]
+	echo "i is greater or equal to 0"
+elif [ i -eq 0 ]
+	echo "i is equal to 0"
+elif [ i == 0 ]
+	echo "i is equal to 0"
+else
+	echo "Now in else"
+fi
+
+echo "Switch case statmts"
+
+while:
+do
+	read i
+
+	case i in
+		hello)
+			echo "Hello yourself";;
+		bye)
+			echo "Bye now!";;
+		*)
+			echo "Not sure how to get here";;
+	esac
+done
+echo
+echo "Should be it!"
+
+echo "This is for"
+
+if [ i -lt 0 ]
+then
+	echo "i is less than 0"
+elif [ i -ge 0 ]; then
+	echo "i is greater or equal to 0"
+elif [ i -eq 0 ]; then
+	echo "i is equal to 0"
+#elif [ i == 0 ]; then
+#	echo "i is equal to 0"
+else
+	echo "Now in else"
+fi
+
+echo "Switch case statmts"
+
+while :
+do
+	read i
+	case $i in
+		hello)
+			echo "Hello yourself";;
+		bye)
+			echo "Bye now!"
+			break;;
+		*)
+			echo "Not sure how to get here";;
+	esac
+done
+echo
+echo "Should be it!"
+

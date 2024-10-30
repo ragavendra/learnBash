@@ -1,0 +1,927 @@
+  189  echo $2
+  190  echo &2
+  191  echo &1
+  192  echo &0
+  193  some=`find / -name "*.html" -print 2> err`
+  194  echo &1
+  201  ./learn.sh 
+  202  cat err
+  203  echo "Value of ${somevar:-text}"
+  204  somevar=serr
+  205  echo "Value of ${somevar:-text}"
+  206  echo "Value of ${somevar:=text}"
+  207  somevar=
+  208  echo "Value of ${somevar:=text}"
+  209  cat ~/.bashrc
+  220  ./learn.sh 
+  221  echo $x
+  222  tee err
+  223  cat err
+  224  some=`find / -name "*.html" -print 2> err`
+  225  tee err
+  226  cat err
+  227  some=`find / -name "*.html" -print 2> err`
+  228  cat err
+  229  tee --h
+  230  source learn
+  231  source learn.sh
+  232  source learn.sh
+  233  someFunc 1 2 3 | tee out.log
+  234  echo $x
+  235  fg
+  236  ./learn.sh 
+  237  fg
+  238  sudo pacman -Syu
+  240  init 6
+  242  echo $IFS
+  243  ls /dev
+  244  ls /dev -allt
+  245  echo $X | grep "[^0-9]" > /dev/null 2>&1
+  246  X=In the some
+  247  X="In the some"
+  248  echo $X | grep "[^0-9]" > /dev/null 2>&1
+  249  echo $X | grep "[^0-9]"
+  250  X="In 8the some"
+  251  echo $X | grep "[^0-9]"
+  252  echo $X | grep "[^0-9]" > /dev/null 2>&1
+  253  ./learn.sh 
+  254  which sh
+  255  tmux kill-session 1
+  256  tmux --h
+  257  man tmux
+  258  tmux
+  259  tmux -N
+  260  which shell
+  261  exit
+  262  lsk
+  263  ls
+  264  ls
+  265  exit
+  266  exit
+  267  ls
+  268  tmux a
+  269  ls
+  270  tmux a
+  271  exit
+  272  fg
+  273  exit
+  274  exit
+  275  exit
+  276  ls /etc/services 
+  277  cat /etc/services 
+  278  cp /etc/services .
+  279  vim services 
+  280  ex
+  281  man ex
+  282  ls
+  283  ex services 
+  284  jobs
+  285  fg
+  286  cat /etc/updatedb.conf
+  287  locate services
+  288  find /etc/ -ls
+  289  find /etc/
+  290  find /etc/ -ls
+  291  find /etc/ -lsh
+  292  find /etc/ -ls -h
+  293  find /etc/ -ls -S
+  294  find /etc/ -ls -s
+  295  find /etc/ -ls
+  296  find /etc/
+  297  find /etc/ 2>/dev/null
+  298  find /etc/ -name '*passwd*' 2>/dev/null
+  299  find /etc/ -iname '*passwd*' 2>/dev/null
+  300  find /etc/ -size +10M 2>/dev/null
+  301  find /etc/ -size -1M 2>/dev/null
+  302  find /etc/ -size +1M -size -100M 2>/dev/null
+  303  find /etc/ -size +1M -size -100M 
+  304  find /etc/ -size +1M -size -100M 2>/dev/null -exec du -sh {} \;
+  305  find /etc/ -size +1M -size -100M 
+  306  find /etc/ -size +1M -size -100M 2>/dev/null
+  307  find /etc/ -size +1M -size -100M 2>/dev/null -exec du -sh {} \;
+  308  find /etc/ -size +1M -size -100M 2>/dev/null -ls
+  309  find /home -user scion -ls 2>/dev/null -ls
+  310  find /home -user scion or -user joe -ls 2>/dev/null -ls
+  311  find /home -user scion or -user joe -ls
+  312  find /home -user scion -or -user joe -ls
+  313  find /home -user scion -or -user root -ls
+  314  find /etc -user scion -or -group root -ls
+  315  find /etc -user scion -or -group root -ls
+  316  find /etc -user scion -or -group root -ls
+  317  find /etc -user scion -or -group root -ls
+  318  find /etc -group scion -or -group root -ls
+  319  find /etc -group scion  -group root -ls
+  320  find /etc -group ntp -group root -ls
+  321  find /etc -group ntp  -ls
+  322  find /etc -group ntp  -ls
+  323  find /etc -group ntp  -ls 2>/dev/null
+  324  find /var/spool -not -user root  -ls 2>/dev/null
+  325  find /bin -perm 755 2>/dev/null
+  326  find /bin -perm 755
+  327  find /bin -perm -222
+  328  find /bin -perm -222 -type d -ls
+  329  find /bin -perm +222 -type d -ls
+  330  find /bin -perm +755
+  331  find /bin -perm 755
+  332  find /bin -perm -755
+  333  find /bin -perm +7
+  334  find /bin -perm 755
+  335  find /bin -perm -222
+  336  find /bin -perm 755 -ls
+  337  find /usr/bin -perm 755 -ls
+  338  find /usr/bin -perm +755 -ls
+  339  find /usr/bin -perm -755 -ls
+  340  find /usr/bin -perm -222 -ls
+  341  find /usr/bin -perm -111 -ls
+  342  find /usr/bin -perm -111
+  343  find /usr/bin -perm -111 -ls
+  344  find /usr/bin -perm -111 -ls -type d
+  345  find /usr/bin -perm -222 -ls -type d
+  346  find /usr/bin -perm -222 -ls -type f
+  347  find /usr/bin -perm -222 -ls -type d
+  348  find /usr/bin -perm -222 -ls -type f
+  349  find /usr/bin -perm +222 -ls -type f
+  350  find /usr/bin -perm +222 -type f
+  351  find /usr/bin -perm -444 -ls -type f
+  352  find /usr/bin -perm 444 -ls -type f
+  353  find /usr/bin -perm +444 -ls -type f
+  354  find /usr/bin -perm -444 -ls -type f
+  355  which sh
+  356  man chsh
+  357  man chsh
+  358  man shells
+  359  getusershell
+  360  man shells
+  361  chsh
+  362  chsh --h
+  363  chsh -l
+  364  bash
+  365  echo $0
+  366  find /usr/bin -perm 444 -ls -type f
+  367  find /usr/bin -perm -444 -ls -type f
+  368  find /usr/bin -perm -111 -ls -type f
+  369  find /usr/bin -perm 111 -ls -type f
+  370  find /usr/bin -perm +111 -ls -type f
+  371  find /usr/bin -perm 222 -ls -type f
+  372  find /usr/bin -perm -222 -ls -type f
+  373  find /usr/bin -perm 222 -ls -type f
+  374  find /usr/bin -perm +222 -ls -type f
+  375  man find 
+  376  find /usr/bin -perm 222 -ls -type f
+  377  find /usr/bin -perm 222 -ls -type f
+  378  find /usr/bin -perm 444 -ls -type f
+  379  find /usr/bin -perm -444 -ls -type f
+  380  find /etc -mmin -10 
+  381  find /etc -mmin -10 2>/dev/null
+  382  find /var/log -mmin -10 2>/dev/null
+  383  find /var/log /bin /usr/bin /sbin /usr/sbin -ctime -3  2>/dev/null
+  384  find /etc -ctime -10 
+  385  find /var/log -ctime -10 2>/dev/null
+  386  find /var/log -mmin -10 2>/dev/null
+  387  ls /var/ftp
+  388  ls /var/www
+  389  find /bin /usr/bin /sbin /usr/sbin -ctime -3  2>/dev/null
+  390  find /bin /usr/bin /sbin /usr/sbin -atime -300  2>/dev/null
+  391  find /bin /usr/bin /sbin /usr/sbin -atime -3  2>/dev/null
+  392  history
+  393  exit
+  394  fg
+  395  exit
+  396  echo $SHLVL
+  397  exit
+  398  man chmod
+  399  cat ~/.bashrc
+  400  man chmod
+  401  man_ chmod
+  402  man_ chmod
+  403  man chmod
+  404  cat ~/.bashrc
+  405  . ~/.bashrc
+  406  man_ chmod
+  407  man chmod
+  408  declare | grep PAGER
+  409  declare | grep man()
+  410  declare | grep man
+  411  declare | grep "man()"
+  412  declare | grep "man_()"
+  413  declare | grep "man_ ()"
+  414  declare | grep "man ()"
+  415  man chmod
+  416  export PAGER="less"
+  417  man chmod
+  418  cat ~/.bashrc
+  419  echo $0
+  420  echo $SHLVL
+  421   2322  echo $!
+  422   2323  echo $!
+  423   2324  ls
+  424   2325  echo $!
+  425   2326  echo $#
+  426   2327  echo $$
+  427   2328  echo $$
+  428   2329  echo $W
+  429   2330  echo $TMOUT
+  430   2331  echo $TMOUT_
+  431   2332  echo $TMOUT
+  432   2333  echo $TMOUT
+  433   2334  echo .
+  434   2335  echo $.
+  435   2336  env
+  436   2337  ls /bin
+  437   2338  help
+  438   2339  man -k ls
+  439   2340  man -k ls | more
+  440   2341  help
+  441   2342  man -k ls| more
+  442   2343  man -k | more
+  443   2344  man -k
+  444   2345  help
+  445   2346  man 3 open
+  446   2347  man 3 fopen
+  447   2348  man 2 fopen
+  448   2349  man 2 open
+  449   2350  open
+  450   2351  man 4 fopen
+  451   2352  man 4 open
+  452   2353  man 4 tty1
+  453   2354  man 4 tty
+  454   2355  man 4
+  455   2356  man 4 man
+  456   2357  man 4 tty
+  457   2358  man 4 sda
+  458   2359  man 4 wlan0
+  459   2360  man 4 wlan
+  460   2361  man -k passwd
+  461   2362  man -k open
+  462   2363  man -k open | more
+  463   2364  man -k open | less
+  476  jobs
+  477  bg
+  478  kill -SIGCONT 65259
+  479  ps | grep vim
+  480  ps -aux | grep vim
+  482  kill -SIGCONT 2256383
+  483  kill -SIGSTOP 
+  484  kill -SIGCONT 2256383
+  485  fg
+  486  bg
+  487  ls
+  488  vim halt_cam.sh 
+  480  ps -aux | grep vim
+  492  htop
+  493  fg
+  494  ls
+  495  cleat
+  496  cleat
+  497  clear
+  498  jobs
+  499* exit
+  500  jobs
+  501  kill -SIGSTOP 3128
+  502  jobs
+  503  kill -SIGCONT 3128
+  504  ls
+  505  vim learn.sh
+  506  ls -allt
+  507  vim learn.sh
+  508  bg
+  509  bg
+  510  jobs
+  511  disown -h %1
+  512  jobs
+  513  jobs
+  514  fg
+  515  jobs
+  516  bg
+  517  bg
+  518  fg
+  519  jobs
+  520  vim ~/.bashrc
+  521  vim ~/.bashrc
+  522  vim ~/.bash_profile 
+  523  vim ~/.bashrc
+  524  vim ~/.bashrc.backup 
+  525  cp ~/.bashrc.backup ~/.bashrc -f
+  526  vim ~/.bashrc
+  527  su
+  528  su
+  529  su
+  530  sudo mail
+  531  man jobs
+  532  man kill
+  533  man signal
+  534  man jobs
+  535  man jobs
+  536  man disown
+  537  man nohup
+  538  ls -allt
+  539  jobs
+  540  bg %1
+  541  jobs
+  542  bg 1
+  543  jobs
+  544  man signals
+  545  man signal
+  546  systemctl status
+  547  ps -aux 
+  548  kilall -SIGHUP mariadb
+  549  killall -SIGHUP mariadb
+  550  killall -SIGHUP mariadbd
+  551  sudo killall -SIGHUP mariadbd
+  552  systemctl status mariadb
+  553  sudo killall -SIGHUP mariadbd
+  554  systemctl status mariadb
+  555  updatedb
+  556  sudo nice +5 pacman -Syu &5
+  557  top
+  558  ps  
+  559  ps  -aux
+  560  sudo renice -n -5 637848
+  561  ps  -aux
+  562  top
+  563  htop
+  564  jobs
+  565  top
+  566  htop
+  567  top
+  568  jobs
+  569  sudo renice -n -5 637848
+  570  sudo htop
+  571  sudo renice -n 5 637848
+  572  sudo htop
+  573  sudo renice -n -5 637848
+  574  sudo top
+  575  jobs
+  576  fg 2
+  577  jobs
+  578  sudo nice 5 pacman -Syu &
+  579  jobs
+  580  sudo nice +5 pacman -Syu &
+  581  sudo nice +5 sudo pacman -Syu &
+  582  nice +5 sudo pacman -Syu &
+  583  jobs
+  584  sudo nice +5 `sudo pacman -Syu` &
+  585  jobs
+  586  sudo htop
+  587  sudo nice -5 `sudo pacman -Syu` &
+  588  jobs
+  589  sudo htop
+  590  jobs
+  591  fg 2
+  592  nice +5 ls &
+  593  nice +5 ls
+  594  nice 5 ls
+  595  nice
+  596  nice --h
+  597  nice +5 ls
+  598  cat /etc/cgconfig.conf
+  599  ls /etc -type f
+  600  find /etc -type f
+  601  cgcreate
+  602  cgreate
+  603  ls /sys/fs/cgroup
+  604  ps -aux | less
+  605  gedit
+  606  xeyes
+  607  nice vim +5 vim &
+  608  jobs
+  609  ps -aux | less
+  610  ps -aux | less
+  611  top
+  612  top
+  613  top
+  614  ps -aux | less
+  615  top
+  616  renice 660712 -5
+  617  renice -5 660712
+  618  renice 2 660712
+  619  renice 7 660712
+  620  renice 11 660712
+  621  top
+  622  ps -aux | less
+  623  ps -allt | less
+  624  ps
+  625  ps u
+  626  ls /proc
+  627  cat /proc/1
+  628  cat /proc/1/io
+  629  cat /proc/660712
+  630  cat /proc/660712/arch_status 
+  631  cat /proc/660712/io
+  632  ps u
+  633  ps
+  634  jobs
+  635  /jobs
+  636  \jobs
+  637  ps ux | less
+  638  ps aux | less
+  639  ps ux | less
+  640  ps u
+  641  ps -eo pid,user,group,gid,vsz,rss,comm --sort=-rss | less
+  642  top
+  643  top
+  644  top
+  645  jobs
+  646  dt() { while [ -n 2 ] ; do echo date done }
+  647  declare | grep dt
+  648  declare | grep dt()
+  649  declare
+  650  fg
+  651  fg
+  652  jobs
+  653  bg
+  654  jobs
+  655  dt() { while [ -n 2 ]  do echo date done }
+  656  fg
+  657  dt() { while [ -n 2 ]:  do echo date done }
+  658  dt() { while:  do echo date done }
+  659  declare
+  660  dt() { while :  do echo date done }
+  661  fg
+  662  dt() { while:  do echo date done }
+  663  dt() { while:; do
+  664  fg
+  665  dt() { while : do; echo date; done
+  666  dt() { while: do; echo date; done; }
+  667  fg
+  668  dt() { while:; do; echo date; done; }
+  669  dt() { while: do; echo date; done; }
+  670  dt() { while: do; echo date done; }
+  671  declare
+  672  dt &
+  673  jobs
+  674  dt() { while : do; echo date done; }
+  673  fg
+  676  htop
+  677  htop
+  678  ps u | less
+  679  htop
+  680  htop
+  681  top
+  682  htop
+  683  ps u
+  684  killall some.sh
+  685  trap --help
+  686  trap -l
+  687  trap -p
+  688  history >> his
+    5  du -d1
+    6  du -hs
+    7  du -hs 2>/dev/null
+    8  df
+    9  df -h
+   10  systemctl status docker
+   11  find /var/log -mtime -10
+   12  find /var/log -mtime -10 -ls
+   13  find /var/log -mtime -10 -ls | sort -nr
+   14  find /var/log -mtime -10  | sort -nr
+   15  find /var/log -mmin -10  | sort -nr
+   16  find /var/log -mmin -10 -ls | sort -nr
+   17  ls ~/.local/share/Trash/
+   18  ls ~/.local/share/Trash/ -allt
+   19  ls ~/.local/share/Trash/files -allt
+   20  ls ~/.local/share/Trash/info -allt
+   21  ls ~/.local/share/Trash/files -allt
+   22  xdpyinfo | grep dim
+   23  xdpyinfo
+   24  clear
+   25  fg
+   26  disown -h 1
+   27  disown -h 2
+   28  jobs
+   29  DISOWN -Hage1
+   30   2077  shadow
+   31   2078  man shadow
+   32   2079  echo $PAGER
+   33   2080  more
+   34   2081  PAGER=more
+   35   2082  man shadow
+   36   2083  echo $PAGER
+   37   2084  most
+   38   2085  cat /usr/share/man/man1/grep.1 | nroff -c -man | less
+   39  1 ]
+   40   2256  echo [ 1 -eq 1 ]
+   41   2257  echo $[ 1 -eq 1 ]
+   42   2258  man test
+   43   2259* test # -eq 1
+   44   2260  echo $[ E -eq P ]
+   45   2261  echo $E
+   46   2262  echo $P
+   47   2263  echo $U
+   48   2264  echo $I
+   49   2265  echo $[ E -eq I ]
+   50   2266  [ E -eq I ]
+   51   2267  E=2
+   52   2268  [ E -eq I ]
+   53   2269  echo $E
+   54   2270  [ 1 -eq 1 ]
+   55   2271  [ 2 -eq 1 ]
+   56   2272  cat /etc/profile
+   57   2273  test -d /etc/profile.d
+   58   2274  echo test -d /etc/profile.d
+   59   2275  echo $(test -d /etc/profile.d)
+   60   2276  echo $(test -d /etc/iprofile.d)
+   61   2277  man test
+   62   2278  ls /etc/profile.d
+   63   2279  cat /etc/profile.d/jre.csh
+   64   2280  cat /etc/profile.d/jre.sh
+   65   2281  setenv
+   66   2282  man test
+   67   2283  cat /etc/profile.d/debuginfod.csh
+   68   2284  ls /etc/profile.d -exec cat "{}" \;
+   69   2285  find /etc/profile.d -exec cat "{}" \;
+   70   2286  man find
+   71   2287  man exec
+   72   2288  ls /etc/profile.d exec cat "{}" \;
+   73   2289  man ls
+   74   2290  find /etc/profile.d -exec cat "{}" \; | less
+   75  4075674
+   76  kill -SIGSTOP 4075674
+   77  fg
+   78  KILL -sigcont 4075674
+   79  ls
+   80  rm 'udo pacman -S most' 
+   81  ls
+   82  cat hadow 
+   83  rm hadow 
+   84  sigkill -SIGSTOP 4075674
+   85  kill -SIGSTOP 4075674
+   86  KILL -sigcont 4075674
+   87  KILL -sigcont 4075674
+   88  KILL -sigcont 4075674
+   89  kill -SIGCONT 4075674
+   90  htop
+   91  kill -SIGCONT 4075674
+   92  exit
+   93  fg
+   94  cd
+   95  exit
+   96  ps -all | grep compiler.js
+   97  echo $0
+   98  ls
+   99  vim compiler.js 
+  100  bg
+  101  disown -h %1
+  102  jobs
+  103  vim compiler.js 
+  104  ps
+  105  clear
+  106  ps
+  107  ps
+  108  disown %1
+  109  ps
+  110  exit
+  111  ps -all | grep compiler.js
+  112  ps -all | grep compiler.js
+  113  ps -allt | grep compiler.js
+  114  ps -allt | grep compiler.js
+  115  ps -allt | grep compiler.js
+  116  ps -allt | grep compiler.js
+  117  ill -i
+  118  kill -SIGSTOP 543582
+  119  kill -SIGCONT 543582
+  120  fg
+  121  jobs
+  122  jobs
+  123  ps -allt | grep compiler.js
+  124  man nohup
+  125  man nohup
+  126  ps -allt | grep compiler.js
+  127  ps -allt | grep compiler.js
+  128  exit
+  129  kill -SIGCONT 547756
+  130  jobs
+  131  kill -SIGCONT 547756
+  132  jobs -l
+  133  jobs -p
+  134  bg
+  135  ps -f 547756
+  136  lsof -p 547756
+  137  lsof -p 547756
+  138  lsof -p 547756
+  139  nohup -p 547756
+  140  nohup --help
+  141  exit
+  142  vim compiler.js 
+  143  jobs
+  144  bg
+  145  jobs
+  146  disown %1
+  147  jobs
+  148  k
+  149  jobs
+  150  fg
+  151  man disown
+  152  man jobs
+  153  jobs
+  154  jobs
+  155  own
+  156  disown
+  157  nohup -p 547756
+  158  nohup -p 547756
+  159  lsof -p 547756
+  160  lsof -p 547756
+  161  clear
+  162  exit
+  163  echo $SHLVL
+  164  exit
+  165  which shell
+
+  395  kill -SIGSTOP 62529
+  396  kill -SIGSTOP 65259
+  397  kill -SIGSTOP 2256383
+  400  ps -aux | grep java
+  404  killall -SIGHUP jshell
+  405  killall -SIGHUP jshell
+  406  killall -1 jshell
+  407  killall -SGHUP jshell
+  417  jobs
+  418  jobs
+  419  ps u
+  420  pkill 701390
+  421  kill 701390
+  422  kill 706927
+  423  ps u
+  424  killall some.sh
+  425  ps u
+  426  killall some.sh
+  427  htop
+  435  makepkg -i
+  443  git blame learn.java
+  472  ./some.sh 2>/dev/null &
+  478  (some.sh)
+  479  (./some.sh)
+  480  bash -c './some.sh 2>/dev/null &'
+  481  jobs
+  482  fg
+  483  find / -uid 1000 -ls &
+  486  
+  494  set -o emacs
+  495  find / -uid 1000 -ls &
+  498  ls
+  499  set -o vi
+  503  ls
+  507  getfacl test
+  508  ls -allt
+  509  setfacl -m u:scion:rwx out.log 
+  510  ls -allt
+  511  getfacl out.log 
+  512  getfacl learn
+  513  getfacl learn.sh
+  514  setfacl -m g:scion:rwx out.log 
+  515  getfacl out.log 
+  516  find / --size +1G
+  517  find / -size +1G
+  518  find / -size +1G 2> /dev/null
+  519  find / -size +1G -not /run 2> /dev/null
+  520* find / /run -size +1G
+  521  cpio
+  522  cpio --help
+  523  man cpio
+  524  dump --h
+  525  restore
+  526  man restore
+  527  dump
+  528  tar
+  529  tail -f /var/log/secure 
+  530  ls /var/log/secure 
+  531  ls /var/log/
+  532  faillock --user scion
+  533  cat /var/log/lastlog 
+  534  cat /var/log/lastlog 
+  535  lastlog
+  536  cat /var/log/audit/
+  537  ls /var/log/audit/
+  538  cat /var/log/auth.log
+  539  sudo cat /var/log/auth.log
+  540  journalctl SYSLOG_FACILITY=10
+  541  journalctl SYSLOG_FACILITY=10
+  542  cat /etc/shadow 
+  543  sudo cat /etc/shadow 
+  544  sudo cat /etc/shadow  | grep scion
+  545  man cat
+  546  man cut
+  547  sudo cat /etc/shadow  | cut -d: -f8
+  548  sudo cat /etc/shadow  | cut -d: -f1
+  549  sudo cat /etc/shadow  | cut -d: -f1 -f2
+  550  gawk -F: '{print $1,$8}' /etc/shadoW
+  551  gawk -F: '{print $1,$8}' /etc/shadow
+  552  sudo gawk -F: '{print $1,$8}' /etc/shadow
+  553  TODAY=$(echo $(($(date --utc --date "$1" +%s)/86400)))
+  554  echo $TODAY
+  555  userdel --h
+  556  echo $SUDO
+  557  chroot -h
+  558  chroot --help
+  559  man chroot
+  562  useradd --help
+  563  useradd --help
+  564  useradd tlupi
+  565  sudo useradd tlupi
+  566  passwd tlupi 
+  567  sudo passwd tlupi 
+  568  sudo passwd tlupi 
+  569  man user
+  570  man su
+  571  su tlupi
+  572  clear
+  573  cat /etc/systemd/journald.conf
+  574  systemd-analyze cat-config systemd/journald.conf 
+  575  ls /run/systemd/
+  576  ls /run/systemd/journal/
+  577  ls /var/log/journal/
+  578  ls /var/log/journal/98d1f20a954147f09cfdec5084a068f2/
+  579  journalctl -b
+  580  journalctl -b -1
+  581  journalctl -b -1 --color
+  582  journalctl --help
+  583  journalctl --list-boots 
+  584  journalctl -x
+  585  journalctl -x
+  586  journalctl --since="2012-10-30 18:17:16"
+  587  journalctl --since="2024-10-30 18:17:16"
+  588  journalctl --since="2024-9-30 18:17:16"
+  589  journalctl --since="2024-9-30 18:17:16"
+  590  journalctl -f
+  591  journalctl /usr/lib/systemd/systemd
+  592  journalctl -t sudo
+  593  jobs
+  594  echo "hi" &
+  595  journalctl _PID=1023994
+  596  journalctl _PID=1023993
+  597  journalctl _PID=10239930
+  598  ps -aux
+  599  ps -a
+  600  journalctl _PID=43615
+  601  journalctl _PID=43615
+  602  journalctl _PID=43080
+  603  journalctl _PID=2818
+  604  ps -au
+  605  journalctl _PID=2832
+  606  ps -aux | grep vim
+  607* journalctl _PID=4
+  608  ps -auxH | grep vim
+  609  journalctl _PID=44341
+  610  lctl -u man-db.servicE
+  611  journalctl -u man-db.service
+  612  journalctl -u man-db.service --user 
+  613  journalctl -u dbus --user 
+  614  journalctl -u dbus
+  615  journalctl -h
+  616  journalctl -k
+  617  journalctl -p err..alert
+  618  ls
+  620  declare
+  624  ps -aux | grep vim
+  625  ps
+  626  fg 1
+  627  jobs
+  628  i
+  629* ifg
+  630  ls -allt
+  631  find / -perm /6000 -ls
+  632  find / -perm /6000 -ls 2> /dev/null
+  633  find / -perm /6000 -ls 2> /dev/null | less
+  634  find / -perm /6000 -ls 2> /dev/null | less
+  635  ls -allt /etc/shadow 
+  636  ls -allt /etc/password
+  637  ls -allt /etc/passwd
+  638  ls -allt /etc/group
+  639  ls -allt /etc/gshadow
+  640  ls -allt /etc/fstab 
+  641  cat /etc/fstab 
+  642  ls /var/log
+  643  ls /var/log/nginx/
+  644  cat /var/log/nginx/access.log
+  645  sudo cat /var/log/nginx/access.log
+  646  sudo cat /var/log/nginx/access.log
+  647  sudo cat /var/log/wtmp
+  648  sudo cat /var/log/wtmp | less
+  649  man cat
+  650  man cat
+  651  ls /var/log
+  652  ls /var/log/httpd/
+  653  cat /var/log/httpd/access_log
+  654  cat /var/log/httpd/error_log
+  655  cat /var/log/btmp
+  656* sudo cat /var/log/boo
+  657  cat /var/log/pacman.log 
+  658  ls /var/log/httpd/
+  659  ls /var/log
+  660  ls /var/log/Xorg.0.log
+  661  cat /var/log/Xorg.0.log
+  662  btmp
+  663  dump-utmp
+  664  ls /var/log
+  665  unshadow
+  666  unshadow /etc/passwd /etc/shadow > pass
+  667  sudo unshadow /etc/passwd /etc/shadow > passFile
+  668  cat passFile 
+  669  vim passFile 
+  670  john passFile 
+  671  jobs
+  672  bg
+  673  jobs
+  674  bg
+  675  jobs
+  676  ls -l /usr/share/john/password.lst 
+  677  ls -lh /usr/share/john/password.lst 
+  678  head /usr/share/john/password.lst 
+  679  tail /usr/share/john/password.lst 
+  680  vim ~/.bash_profile
+  681  tail /usr/share/john/password.lst 
+  682  tail /usr/share/john/password.lst 
+  683  tail /usr/share/john/password.lst 
+  684  s -lh /usr/share/john/password.lst 
+  685  stty -ixon
+  686  history-search-forward
+  687  declare | grep history-search-forward
+  688  declare | less
+  689  echo 'stty -ixon' >> ~/.bashrc
+  690  fg
+  691  cat /etc/profile | grep history-search-forward
+  692  cat /etc/profile | grep history
+  693  cat /etc/profile 
+  694  cat /etc/bash.bashrc | grep history
+  695  cat /etc/bash.bashrc
+  696  cat ~/.inputrc
+  697  cat /etc/inputrc
+  698  bash --version
+  699  set show-mode-in-prompt on
+  700  echo 'set show-mode-in-prompt on' >> ~/.inputrc
+  701  man history
+  702  help history
+  703  find / | grep history-search-forward
+  704  find / 2> /dev/null | grep history-search-forward
+  705  bind
+  706  [200~bind '"\C-t": reverse-search-history'
+  707  bind '"\C-t": reverse-search-history'
+  708  help bind
+  709  bind -l
+  710  bind -l | less
+  711  help bind
+  712  bind -P | less
+  713  unbind
+  714  bind reverse-search-history'
+  715  bind -r reverse-search-history
+  716  bind -P | grep reverse-search-history
+  717  bind -r reverse-search-history
+  718  bind -P | grep reverse-search-history
+  719  bind -r reverse-search-history
+  720  bind -P | grep reverse-search-history
+  721  bind -P | grep search-history
+  722  bind -r forward-search-history
+  723  bind -P | grep search-history
+  724  bind -p | grep search-history
+  725  jobs
+  726  fg
+  727  jobs
+  728  bg
+  729  bind -p | grep search-history
+  730  bind -r forward-search-history
+  731  bind -p | grep search-history
+  732  bind -p | grep search-history
+  733  bind -p | grep search-history
+  734  bind -p | grep search-historybind
+  735  mv ~/.inputrc ~/.inputrc_ -f
+  736  vim ~/.inputrc
+  737  jobs
+  738  bind -p | grep search-history
+  739  bind '"\C-r": reverse-search-history'
+  740  bind -p | grep search-history
+  741  jobs
+  742  bg 1
+  743  jobs
+  744  fg
+  745  find / -perm /6000 -ls 2> /dev/null | less
+  746  find / -perm /6000 -ls 2> /dev/null
+  747  ls /var/log
+  748  auditctl -w /etc/passwd -p rwa
+  749  sudo auditctl -w /etc/passwd -p rwa
+  750  auditctl -l
+  751  sudo auditctl -l
+  752  ausearch -f /etc/passwd
+  753  cat /etc/passwd
+  754  cat /var/log/audit/audit.log
+  755  touch /var/log/audit/audit.log
+  756  sudo touch /var/log/audit/audit.log
+  757  ausearch -f /etc/passwd
+  758  sudo chmod 0600 /var/log/audit/audit.log
+  759  ausearch -f /etc/passwd
+  760  sudo ausearch -f /etc/passwd
+  761  ausearch -f /etc/passwd
+  762  sudo chmod 0640 /var/log/audit/audit.log
+  763  ausearch -f /etc/passwd
+  764  sudo ausearch -f /etc/passwd
+  765  sudo auditctl -W /etc/passwd -p rwa
+  766  sudo auditctl -l
+  767  cat passFile 
+  768   cat /etc/passwd
+  769  cat passFile 
+  770  paccache -r
+  771  pactree
+  772  ls
+  773  cat his | grep his
+  774  cat his | grep nice
+  775  nice
+  776  history > his.0
