@@ -1,0 +1,49 @@
+  kk
+  504  criu dump -t $(pgrep infLoop.sh) -D ~/Documents/infinite-loop
+  505  man criu
+  506  setsid ./infLoop.sh &
+  507  criu dump -t $(pgrep infLoop.sh) -D ~/Documents/infinite-loop
+  508  ls /etc/X11/
+  509  ls /etc/X11/xorg.conf.d/
+  510  criu check
+  511  type criu
+  512  setcap cap_checkpoint_restore+eip /usr/bin/criu
+  513  sudo setcap cap_checkpoint_restore+eip /usr/bin/criu
+  514  criu dump -t $(pgrep infLoop.sh) -D ~/Documents/infinite-loop
+  515  criu dump -t $(pgrep infLoop.sh) -D ~/Documents/infinite-loop --unprivileged
+  516  criu dump -t $(pgrep infLoop.sh) -D ~/Documents/ --unprivileged
+  517  sudo criu dump -t $(pgrep infLoop.sh) -D ~/Documents/
+  518  vim criu_sample.c
+  519  gcc criu_sample.c 
+  520  ./a.out &
+  521  sudo criu dump -t $(pgrep a.out) -D ~/Documents/
+  522  pgrep a.out
+  523  fg 5089
+  524  pgrep a.out
+  525  sudo criu dump -t 5161 -D ~/Documents/
+  526  pkill 5089
+  527  pgrep a.out
+  528  top -p 5089
+  529  pgrep a.out
+  530  gcc criu_sample.c -p criu.samp
+  531  gcc criu_sample.c -o criu.samp
+  532  pgrep criu.samp
+  533  sudo criu dump -t 5340 -D ~/Documents/
+  534  pgrep criu.samp
+  535  pgrep a.out
+  536  pkill 5089
+  537  pgrep a.out
+  538  sudo criu dump -t 5340 -D ~/Documents/ --shell-job
+  539  ls ~/Documents/
+  540  mkdir ~/Documents/criu_dmp
+  541  sudo criu dump -t 5340 -D ~/Documents/criu_dmp --shell-job
+  542  pgrep criu.samp
+  543  sudo criu dump -t 5557 -D ~/Documents/criu_dmp --shell-job
+  544  ls ~/Documents/criu_dmp/
+  545  sudo criu restore --shell-job
+  546* pgrep criu.samp
+  547  sudo criu restore --shell-job -D 
+  548  sudo criu restore --shell-job -D ~/Documents/criu_dmp/
+  549  man history
+  550   history 11
+  551   history 100 > criu_usage
